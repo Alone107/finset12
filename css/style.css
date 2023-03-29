@@ -7,11 +7,41 @@ body {
   width: 100%;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4509803922);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.overlay--show {
+  visibility: visible;
+  opacity: 1;
+}
+
 .container {
-  max-width: 1290px;
+  max-width: 1340px;
+  padding: 0 15px;
   margin: 0 auto;
   height: 100%;
   overflow: hidden;
+}
+
+.container {
+  max-width: 1290px;
+  padding: 0 15px;
+  margin: 0 auto;
+  height: 100%;
+  overflow: hidden;
+}
+
+.burger {
+  display: none;
 }
 
 .button {
@@ -22,6 +52,10 @@ body {
   font-family: Sen;
   font-weight: 700;
   transition: all 0.3s;
+  font-size: 18px;
+  line-height: 24px;
+  /* Black */
+  color: #232536;
 }
 
 .button:hover {
@@ -56,6 +90,10 @@ body {
 
 .header__nav-item {
   margin-right: 24px;
+  transition: all 0.3s;
+}
+.header__nav-item :hover {
+  color: #FFD050;
 }
 .header__nav-item:last-child {
   margin-right: 32px;
@@ -76,6 +114,12 @@ body {
   background-color: #fff;
   gap: 12px;
   margin-right: 10px;
+  transition: all 0.3s;
+}
+
+.header__button-btn:hover {
+  background-color: #FFD050;
+  border-radius: 8px;
 }
 
 .header__bottom {
@@ -251,6 +295,11 @@ body {
   font-size: 16px;
   line-height: 28px;
   color: #592EA9;
+  transition: all 0.3s;
+}
+
+.content-head-link:hover {
+  color: #FFD050;
 }
 
 .post__content-content {
@@ -376,6 +425,11 @@ body {
   font-size: 18px;
   line-height: 32px;
   color: #592EA9;
+  transition: all 0.3s;
+}
+
+.about__content-about-link:hover {
+  color: #1E1B1B;
 }
 
 .about__content-mision {
@@ -876,6 +930,11 @@ footer {
 
 .footer__top__nav-item {
   margin-right: 24px;
+  transition: all 0.3s;
+}
+
+.footer__top__nav-item:hover {
+  color: #FFD050;
 }
 
 .footer__top__nav-item:last-child {
@@ -924,8 +983,25 @@ footer {
   padding-left: 25px;
 }
 
+.form {
+  display: flex;
+}
+
 .form-item input {
   margin-left: 25px;
+}
+
+.form-button {
+  font-family: Sen, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #232536;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 
 .footer__bottom {
@@ -967,4 +1043,96 @@ footer {
 
 .bottom-social-link:hover path {
   fill: #ffffff;
+}
+
+@media (max-width: 750px) {
+  .burger {
+    display: block;
+  }
+  .burger span {
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #FFD050;
+    border-radius: 6px;
+    z-index: 200;
+  }
+  .burger ::before {
+    content: "";
+    display: block;
+    width: 30px;
+    margin-top: 8px;
+    height: 4px;
+    background-color: #FFD050;
+    border-radius: 6px;
+  }
+  .burger ::after {
+    content: "";
+    display: block;
+    width: 30px;
+    margin-top: 4px;
+    height: 4px;
+    background-color: #FFD050;
+    border-radius: 6px;
+  }
+  .burger-x span {
+    margin: 0;
+    top: 40px;
+    right: 25px;
+    transform: rotate(90deg);
+  }
+  .burger-x::after {
+    transform: rotateZ(0deg);
+  }
+  .burger-x::before {
+    transform: rotateZ(0deg);
+    background-color: transparent;
+  }
+  .burger--folow {
+    box-shadow: 0 0 4px 1px #000;
+    background-color: #000000;
+  }
+  .header__top {
+    color: #FFD050;
+    padding-bottom: 82px;
+  }
+  .header__top-content {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    background: #232536;
+    width: 320px;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: all 0.5s;
+  }
+  .header__top-content--open {
+    transform: translateX(0%);
+  }
+  .header__btn {
+    display: block;
+  }
+  .header__nav--nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 215px;
+    margin-left: 50px;
+  }
+  .header__nav-item {
+    margin-bottom: 40px;
+  }
+  .header__button-btn {
+    background-color: #FFD050;
+  }
+  .header__nav-link {
+    font-size: 18px;
+  }
 }/*# sourceMappingURL=style.css.map */
