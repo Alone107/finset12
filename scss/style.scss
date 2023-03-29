@@ -25,9 +25,11 @@ body {
   gap: 12px;
   font-family: Sen;
   font-weight: 700;
+  transition: all .3s;
 }
 .button:hover {
   transform: scale(1.05);
+  border-radius: 8px;
 }
 
 // -----------------------------Header-top------------------
@@ -90,6 +92,7 @@ body {
   padding: 16px 48px;
   background-color: #fff;
   gap: 12px;
+  margin-right: 10px;
 }
 
 // -----------------------------Header-bottom------------------
@@ -657,7 +660,7 @@ color: #6D6E76;
 }
 .testimonials__slider {
   background: #FBF6EA;
-  z-index: -5;
+  z-index: -10;
 }
 .slick-initialized .slick-slide {
   display: flex;
@@ -744,6 +747,7 @@ max-width: 469px;
   display: block;
   text-align: end;
   padding: 50px;
+
 }
 
 .review_arrows-next svg {
@@ -756,6 +760,7 @@ max-width: 469px;
   transition: all .3s;
   padding: 15px;
   border-radius: 50%;
+  z-index: 1;
 }
 
 .review_arrows-prev {
@@ -774,7 +779,7 @@ max-width: 469px;
   position: absolute;
   width: 48px;
   height: 48px;
-  z-index: 1;
+  z-index: 5;
   transition: all .3s;
 }
 
