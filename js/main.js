@@ -31,7 +31,7 @@ setInterval(() => {
     $(".burger").removeClass('burger--folow')
   }
 }, 0);
-$('.burger,.overlay,.header__nav-item, .header__logo').on('click', function (e) {
+$('.burger,.overlay').on('click', function (e) {
   e.preventDefault()
   $('.header__top-content').toggleClass('header__top-content--open')
   $('.overlay').toggleClass('overlay--show')
@@ -40,9 +40,9 @@ $('.burger,.overlay,.header__nav-item, .header__logo').on('click', function (e) 
 
 
 
-$("a, .footer__top-logo,.join__wraper-btn,.footer__top__nav-link, .link-home, .header__logo").on("click", function(e) {
-  e.preventDefault()
-  var id  = $(this).attr('href'),
-  top = $(id).offset().top+100
-  $('body,html').animate({ scrollTop: top }, 1500)
-})
+// $("a, .footer__top-logo,.join__wraper-btn, .link-home, .header__logo").on("click", function(e) {
+//   e.preventDefault()
+//   var id  = $(this).attr('href'),
+//   top = $(id).offset().top+100
+//   $('body,html').animate({ scrollTop: top }, 1500)
+// })
